@@ -1,13 +1,16 @@
 # Pedagogy App 🇺🇿
 
-A modern educational web application designed for pedagogy students in Uzbekistan. The app provides a platform for competitions, article submissions, access to the latest books and methodologies, monthly tests, and AI-powered support—all in a fast, easy-to-use frontend.
+A full-featured, professional web application designed for pedagogy students in Uzbekistan. The platform is fully multilingual (Uzbek-first and English), and provides secure registration, competitions, article submissions with peer voting, access to the latest books and methodologies, monthly quizzes with certificates, and integrated AI chatbot support. Built with robust backend and frontend technologies for scalability, security, and a seamless user experience.
 
 ---
 
 ## ✨ Features
 
-- **User Registration:**  
-  Register with your name, surname, educational institution, and field of study.
+- **Multilingual Support:**  
+  Use the app in Uzbek (default) or English.
+
+- **User Registration & Authentication:**  
+  Secure sign-up and login with educational profile.
 
 - **Competitions:**  
   Participate in author-created pedagogy competitions.
@@ -34,41 +37,65 @@ A modern educational web application designed for pedagogy students in Uzbekista
 
 ## 🚀 Tech Stack
 
-- **Frontend:** React (or Next.js), Vite
+- **Frontend:** React (or Next.js), Vite, TypeScript
+- **Backend:** Node.js (Express/NestJS), PostgreSQL/MongoDB, RESTful or GraphQL API
 - **Styling:** Tailwind CSS / Material UI / Ant Design
-- **State Management:** Context API / Zustand
-- **Authentication:** Local/session storage (frontend only)
-- **File Uploads & Voting:** Handled in-browser (localStorage for MVP)
-- **AI Integration:** Embeddable AI chatbot (iframe or SDK; mock for MVP)
+- **Authentication:** JWT/OAuth2, secure backend-managed sessions
+- **File Uploads & Voting:** Handled via backend APIs and secure storage
+- **AI Integration:** Embeddable AI chatbot (OpenAI, Dialogflow, or similar)
 
 ---
 
 ## 🏁 Getting Started
 
+### Prerequisites
+
+- Node.js & npm
+- Database (e.g., PostgreSQL/MongoDB)
+- (Optional) Cloud service credentials for deployment
+
+### Quick Start
+
 ```bash
 git clone https://github.com/cambobart/v0-educational-pedagogy-app.git
 cd v0-educational-pedagogy-app
+
+# Install frontend
+cd frontend
+npm install
+npm run dev
+
+# In a new terminal, setup backend
+cd ../backend
 npm install
 npm run dev
 ```
 
-- Open [http://localhost:5173](http://localhost:5173) in your browser (or the port shown in your terminal).
+- Frontend: [http://localhost:5173](http://localhost:5173)  
+- Backend: [http://localhost:3000](http://localhost:3000) (or as configured)
 
 ---
 
 ## 📂 Project Structure
 
 ```
-src/
-├── assets/          # Images, icons, etc.
-├── components/      # Reusable components (Auth, Books, Articles, etc.)
-├── pages/           # Page-level components
-├── hooks/           # Custom React hooks
-├── utils/           # Helper functions
-├── data/            # Local JSON/data mocks
-├── styles/          # Global and component styles
-├── App.tsx
-└── main.tsx
+frontend/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   ├── data/
+│   └── styles/
+
+backend/
+├── src/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   └── middleware/
 ```
 
 ---
@@ -95,3 +122,9 @@ This project is licensed under the MIT License.
 
 Questions or feedback?  
 Open an issue or contact [@cambobart](https://github.com/cambobart).
+
+---
+
+## ❓ FAQ
+
+See [FAQ.md](./FAQ.md) for frequently asked questions.
